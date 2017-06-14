@@ -1,0 +1,26 @@
+.new-pizza-form {
+    width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Verdana, Arial;
+    font-size: 16px;
+}
+
+.new-pizza-form .input-row {
+    margin-bottom: 10px;
+}
+
+.new-pizza-form input,
+.new-pizza-form label {
+    border: 1px solid #CCC;
+    display: block;
+    padding: 10px 5px;
+    width: 100%;
+}
+
+.new-pizza-form label {
+    text-align: left;
+    font-size: 14px;
+    border: 0;
+    padding-left: 0;
+}

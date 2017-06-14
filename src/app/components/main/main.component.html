@@ -1,0 +1,30 @@
+<div class="new-pizza-form">
+  <div *ngIf="pizzaSaved">
+    <h3>Pizza has been saved!</h3>
+  </div>
+  <div *ngIf="addEnabled">
+    <button (click)="addEnabled = false; pizzaSaved = false">ADD NEW PIZZA</button>
+  </div>
+  <div *ngIf="!addEnabled" >
+    <h3>Add a new pizza</h3>
+
+    <form (submit)="savePizza($event)">
+      <div class="input-row">
+        <label for="pizzaName">Pizza Name</label>
+        <input [(ngModel)]="pizza.name" name="pizzaName" type="text" placeholder="Pizza Name" required>
+      </div>
+      <div class="input-row">
+        <label for="pizzaDescription">Pizza Description</label>
+        <input [(ngModel)]="pizza.description" name="pizzaDescription" type="text" id="pizzaDescription" placeholder="Pizza Description" required>
+      </div>
+      <div class="input-row">
+        <label for="pizzaPrice">Pizza Price</label>
+        <input [(ngModel)]="pizza.price" name="pizzaPrice" type="number" id="pizzaPrice" placeholder="Pizza Price" required>
+      </div>
+
+      <div class="save-pizza">
+        <button type="submit">Save pizza</button>
+      </div>
+    </form>
+  </div>
+</div>
